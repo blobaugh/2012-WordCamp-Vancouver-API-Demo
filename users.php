@@ -76,7 +76,7 @@ function add_user_from_post() {
  */
 function get_user( $handle ) {
     global $db;
-    $query = "SELECT * FROM user_profiles WHERE Handle='$handle'";
+    $query = "SELECT * FROM user_profiles WHERE Handle='$handle' LIMIT 1";
     
     $results = $db->Query( $query );
  
